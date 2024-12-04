@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthInfo - التشخيص الصحي الذكي</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+<body>
+    <header>
+        <h1>HealthInfo - التشخيص الصحي الذكي</h1>
+        <nav>
+            <ul>
+                <li><a href="#diagnosis">التشخيص بالأعراض</a></li>
+                <li><a href="#qa">الأسئلة الطبية</a></li>
+                <li><a href="#medication">قاعدة بيانات الأدوية</a></li>
+                <li><a href="#education">المحتوى التعليمي</a></li>
+                <li><a href="#reminders">التذكيرات الصحية</a></li>
+                <li><a href="#analytics">تحليل البيانات</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. التشخيص بالأعراض -->
+        <section id="diagnosis">
+            <h2>التشخيص بالأعراض</h2>
+            <p>أدخل الأعراض التي تعاني منها للحصول على تشخيص محتمل:</p>
+            <textarea id="symptomsInput" rows="4" placeholder="أدخل الأعراض هنا..."></textarea>
+            <button onclick="diagnoseSymptoms()">تشخيص</button>
+            <div id="diagnosisResult"></div>
+        </section>
+
+        <!-- 2. الأسئلة الطبية -->
+        <section id="qa">
+            <h2>الأسئلة الطبية</h2>
+            <p>هل لديك سؤال طبي؟ اطرحه هنا:</p>
+            <input type="text" id="medicalQuestion" placeholder="أدخل سؤالك...">
+            <button onclick="askMedicalQuestion()">إرسال</button>
+            <div id="qaResult"></div>
+        </section>
+
+        <!-- 3. قاعدة بيانات الأدوية -->
+        <section id="medication">
+            <h2>قاعدة بيانات الأدوية</h2>
+            <p>ابحث عن الأدوية أو الحالة الصحية:</p>
+            <input type="text" id="medicationSearch" placeholder="أدخل اسم الدواء أو الحالة">
+            <button onclick="searchMedication()">بحث</button>
+            <div id="medicationResult"></div>
+        </section>
+
+        <!-- 4. المحتوى التعليمي -->
+        <section id="education">
+            <h2>المحتوى التعليمي</h2>
+            <p>اكتشف مقالات وفيديوهات مفيدة حول الصحة:</p>
+            <div id="educationContent">
+                <ul>
+                    <li><a href="#">التغذية الصحية</a></li>
+                    <li><a href="#">الوقاية من الأمراض</a></li>
+                    <li><a href="#">الصحة النفسية</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 5. التذكيرات الصحية -->
+        <section id="reminders">
+            <h2>التذكيرات الصحية</h2>
+            <p>قم بإعداد التذكيرات التالية:</p>
+            <form id="reminderForm">
+                <label for="reminderType">نوع التذكير:</label>
+                <select id="reminderType">
+                    <option value="medication">تذكير الدواء</option>
+                    <option value="checkup">الفحص الدوري</option>
+                    <option value="vaccination">التطعيم</option>
+                </select>
+                <label for="reminderDate">تاريخ التذكير:</label>
+                <input type="date" id="reminderDate">
+                <button type="submit">إعداد التذكير</button>
+            </form>
+        </section>
+
+        <!-- 6. تحليل البيانات -->
+        <section id="analytics">
+            <h2>تحليل البيانات</h2>
+            <p>تتبع حالتك الصحية عبر الزمن:</p>
+            <div id="analyticsDashboard">
+                <p>لا توجد بيانات كافية بعد. ابدأ باستخدام التطبيق لجمع البيانات.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HealthInfo - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
